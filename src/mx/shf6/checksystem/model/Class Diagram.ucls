@@ -12,7 +12,16 @@
   </class>  
   <class id="2" language="java" name="mx.shf6.checksystem.model.Area" project="ChecadorShiftF6" 
     file="/ChecadorShiftF6/src/mx/shf6/checksystem/model/Area.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="559" y="394"/>    
+    <position height="-1" width="-1" x="492" y="201"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="3" language="java" name="mx.shf6.checksystem.model.Rol" project="ChecadorShiftF6" 
+    file="/ChecadorShiftF6/src/mx/shf6/checksystem/model/Rol.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="493" y="561"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
