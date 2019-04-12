@@ -11,7 +11,7 @@ public class Usuarios {
 	
 	//PROPIEDADES
 	private ObjectProperty<Integer> sysPK;
-	private ObjectProperty<Integer> codigo;
+	private StringProperty codigo;
 	private StringProperty usuario;
 	private StringProperty contrasena;
 	private StringProperty correoElectronico;
@@ -25,15 +25,15 @@ public class Usuarios {
 	
 	//CONSTRUCTOR SIN PARAMETROS
 	public Usuarios(){
-		this(0,0,"","","",null,0,0);
+		this(0,"","","","",null,0,0);
 	}//FIN CONSTRUCTOR
 	
 	//CONSTRUCTOR CON PARAMETROS
-	public Usuarios(Integer sysPK, Integer codigo, String usuario, String contraseña, String correoElectronico, Date fechaRegistro,
+	public Usuarios(Integer sysPK, String codigo, String usuario, String contraseña, String correoElectronico, Date fechaRegistro,
 			Integer status , Integer grupoUsuarioFK) {
 		
 		this.sysPK = new SimpleObjectProperty<Integer>(sysPK);
-		this.codigo = new SimpleObjectProperty<Integer>(codigo);
+		this.codigo = new SimpleStringProperty(codigo);
 		this.usuario = new SimpleStringProperty(usuario);
 		this.contrasena = new SimpleStringProperty(contraseña);
 		this.correoElectronico = new SimpleStringProperty(correoElectronico);
@@ -57,15 +57,15 @@ public class Usuarios {
 	//FIN METODOS
 	
 	//METODOS PARA ACCEDER AL CODIGO
-	public void setCodigo(Integer codigo) {
+	public void setCodigo(String codigo) {
 		this.codigo.set(codigo);
 	}//FIN METODO
 	
-	public Integer getCodigo() {
+	public String getCodigo() {
 		return this.codigo.get();
 	}//FIN METODO
 	
-	public ObjectProperty<Integer> codigoProperty(){
+	public StringProperty codigoProperty(){
 		return this.codigo;
 	}//FIN METODO
 	//FIN METODOS
