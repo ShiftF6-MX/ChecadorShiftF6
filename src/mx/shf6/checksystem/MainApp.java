@@ -16,7 +16,7 @@ import mx.shf6.checksystem.MainApp;
 
 
 public class MainApp extends Application {
-	
+
 	//PANTALLAS PRINCIPALES
 	private  Stage escenarioPrincipal;
 	private BorderPane pantallaBase;
@@ -25,23 +25,23 @@ public class MainApp extends Application {
 	public void start(Stage primaryStage) {
 		//INICIA ESCENARIO PRINCIPAL
 		this.configurarEscenarioPrincipal(primaryStage);
-		
+
 		iniciarEscenarioPrincipal();
 		//iniciarPantallaInicio();
 	}
-	
+
 	private void configurarEscenarioPrincipal(Stage primaryStage) {
 		this.escenarioPrincipal = primaryStage;
 		this.escenarioPrincipal.setMaximized(true);
 		this.escenarioPrincipal.setResizable(false);
 		this.escenarioPrincipal.initStyle(StageStyle.DECORATED);
-		this.escenarioPrincipal.setAlwaysOnTop(true);
+		//this.escenarioPrincipal.setAlwaysOnTop(true);
 	}//FIN METODO
-	
+
 	public Stage getEscenarioPrincipal() {
 		return this.escenarioPrincipal;
 	}//FIN METODO
-	
+
 	public void iniciarEscenarioPrincipal() {
 		try {
 			FXMLLoader fxmlLoader = new FXMLLoader();
@@ -50,33 +50,33 @@ public class MainApp extends Application {
 			Scene escenaPrincipal = new Scene(this.pantallaBase);
 			escenaPrincipal.setFill(Color.BLACK);
 			this.escenarioPrincipal.setScene(escenaPrincipal);
-			this.escenarioPrincipal.show();			
+			this.escenarioPrincipal.show();
 		} catch (IOException | IllegalStateException ex) {
 			System.out.println(ex);
 		}//FIN TRY/CATCH
 	}//FIN METODO
-	
+
 	/*private void iniciarPantallaInicio() {
 		//MODIFICAR ESCENARIO PRINCIPAL
 		this.escenarioPrincipal.setMaximized(false);
 		this.escenarioPrincipal.setResizable(false);
 		this.escenarioPrincipal.setAlwaysOnTop(true);
-		
 
-		
+
+
 		//MUESTRA PANTALLA
 		Rectangle2D limitePantalla = Screen.getPrimary().getVisualBounds();
 		this.escenarioPrincipal.setX(limitePantalla.getWidth() - this.escenarioPrincipal.getWidth() - 25);
 		this.escenarioPrincipal.setY(20);
-		
+
 		try {
 			FXMLLoader fxmlLoader = new FXMLLoader();
 			fxmlLoader.setLocation(MainApp.class.getResource("view/PantallaBase.fxml"));
-			
+
 			this.pantallaInicio = (AnchorPane) fxmlLoader.load();
-			
+
 		}catch (IOException |IllegalStateException ex){
-			
+
 		}
 	}*/
 
