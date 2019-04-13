@@ -1,5 +1,6 @@
 package mx.shf6.checksystem.model;
 
+import java.sql.Connection;
 import java.sql.Date;
 
 import javafx.beans.property.ObjectProperty;
@@ -20,8 +21,9 @@ public class Usuarios {
 	private ObjectProperty<Integer> grupoUsuarioFK;
 	
 	//CONSTANTES
-	public static final int BAJA = 0;
+	public static final int INACTIVO = 0;
 	public static final int ACTIVO = 1;
+	public static final int BAJA = 2;
 	
 	//CONSTRUCTOR SIN PARAMETROS
 	public Usuarios(){
@@ -93,7 +95,7 @@ public class Usuarios {
 		return this.contrasena.get();
 	}//FIN METODO
 	
-	public StringProperty contraseñaProperty() {
+	public StringProperty contrasenaProperty() {
 		return this.contrasena;
 	}//FIN METODO
 	//FIN METODOS
@@ -138,34 +140,15 @@ public class Usuarios {
 	public ObjectProperty<Integer> statusProperty(){
 		return this.status;
 	}//FIN METODO
-	
-	public String getDescripcionStatus() {
-		switch(this.getStatus()) {
-		case 0:
-			return "Baja";
-		case 1:
-			return "Activo";
-		}// FIN SWTICH
-		return "";
-	}//FIN METODO
-	
-	public void setNumerosStatus(String status) {
-		switch(status) {
-		case "Baja":
-			this.setStatus(0);
-			break;
-		case "Activo":
-			this.setStatus(1);
-			break;
-		}//FIN SWTICH
-	}// FIN METODO
-	
+		
 	public StringProperty descripcionStatusProperty() {
 		switch(this.getStatus()){
 			case 0:
-				return new SimpleStringProperty("Baja");
+				return new SimpleStringProperty("Inactivo");
 			case 1:
 				return new SimpleStringProperty("Activo");
+			case 2:
+				return new SimpleStringProperty("Baja");
 		}//FIN SWITCH
 		return new SimpleStringProperty();
 	}//FIN METODO
@@ -178,10 +161,11 @@ public class Usuarios {
 	
 	public Integer getGrupoUsuarioFK() {
 		return this.grupoUsuarioFK.get();
-	}
+	}//FIN METODO
 	
-	public ObjectProperty<Integer> grupoUsuarioFKProperty(){
-		return this.grupoUsuarioFK;
-	}
+	public GrupoUsuario getGrupoUsuario(Connection connection){
+		return connection;
+	}//FIN METODO
+	//FIN METODOS
 	
 }
