@@ -1,6 +1,5 @@
 package mx.shf6.checksystem.model;
 
-import java.sql.Connection;
 import java.sql.Date;
 
 import javafx.beans.property.ObjectProperty;
@@ -141,7 +140,7 @@ public class Usuarios {
 		return this.status;
 	}//FIN METODO
 		
-	public StringProperty descripcionStatusProperty() {
+	public StringProperty statusStringProperty() {
 		switch(this.getStatus()){
 			case 0:
 				return new SimpleStringProperty("Inactivo");
@@ -162,7 +161,9 @@ public class Usuarios {
 	public Integer getGrupoUsuarioFK() {
 		return this.grupoUsuarioFK.get();
 	}//FIN METODO
-	
+	public ObjectProperty<Integer> getGrupoUsuarioFKProperty() {
+		return this.grupoUsuarioFK;
+	}
 	public GrupoUsuario getGrupoUsuario(Connection connection){
 		return connection;
 	}//FIN METODO
