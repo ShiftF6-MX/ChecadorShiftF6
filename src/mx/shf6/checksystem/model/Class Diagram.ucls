@@ -46,9 +46,9 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="6" language="java" name="mx.shf6.checksystem.model.dao.AreaDAO" project="ChecadorShiftF6" 
-    file="/ChecadorShiftF6/src/mx/shf6/checksystem/model/dao/AreaDAO.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1395" y="162"/>    
+  <class id="6" language="java" name="mx.shf6.checksystem.model.RolGrupoUsuario" project="ChecadorShiftF6" 
+    file="/ChecadorShiftF6/src/mx/shf6/checksystem/model/RolGrupoUsuario.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="191" y="1001"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
