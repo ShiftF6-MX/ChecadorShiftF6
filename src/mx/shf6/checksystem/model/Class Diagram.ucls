@@ -12,7 +12,7 @@
   </class>  
   <class id="2" language="java" name="mx.shf6.checksystem.model.Area" project="ChecadorShiftF6" 
     file="/ChecadorShiftF6/src/mx/shf6/checksystem/model/Area.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="492" y="201"/>    
+    <position height="-1" width="-1" x="1118" y="206"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -40,6 +40,15 @@
   <class id="5" language="java" name="mx.shf6.checksystem.model.Usuarios" project="ChecadorShiftF6" 
     file="/ChecadorShiftF6/src/mx/shf6/checksystem/model/Usuarios.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="582" y="1159"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="6" language="java" name="mx.shf6.checksystem.model.dao.AreaDAO" project="ChecadorShiftF6" 
+    file="/ChecadorShiftF6/src/mx/shf6/checksystem/model/dao/AreaDAO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1395" y="162"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
