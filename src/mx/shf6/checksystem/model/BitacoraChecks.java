@@ -11,13 +11,13 @@ import javafx.beans.property.StringProperty;
 
 public class BitacoraChecks {
 
-	private IntegerProperty sysPk;
+	private IntegerProperty sysPK;
 	private ObjectProperty<Date> fecha;
 	private ObjectProperty<Time> horaEntrada;
 	private ObjectProperty<Time> horaSalida;
 	private ObjectProperty<Time> horaComidaSalida;
 	private ObjectProperty<Time> horaComidaEntrada;
-	private IntegerProperty empleado;
+	private IntegerProperty usuario;
 
 	//Constructor sin parametros
 	public BitacoraChecks() {
@@ -25,28 +25,28 @@ public class BitacoraChecks {
 	}
 
 	//Constructor con parametros
-	public BitacoraChecks(Integer sysPk, Date fecha, Time horaEntrada, Time horaSalida, Time horaComidaSalida, Time horaComidaEntrada, Integer empleado) {
+	public BitacoraChecks(Integer sysPK, Date fecha, Time horaEntrada, Time horaSalida, Time horaComidaSalida, Time horaComidaEntrada, Integer usuario) {
 
-		this.sysPk = new SimpleIntegerProperty(sysPk);
+		this.sysPK = new SimpleIntegerProperty(sysPK);
 		this.fecha= new SimpleObjectProperty<Date>(fecha);
 		this.horaEntrada = new SimpleObjectProperty<Time>(horaEntrada);
 		this.horaSalida = new SimpleObjectProperty<Time>(horaSalida);
 		this.horaComidaSalida = new SimpleObjectProperty<Time>(horaComidaSalida);
 		this.horaComidaEntrada = new SimpleObjectProperty<Time>(horaComidaEntrada);
-		this.empleado = new SimpleIntegerProperty(empleado);
+		this.usuario = new SimpleIntegerProperty(usuario);
 	}
 
 	//Metodos get y set SYS_PK
-		public void setSysPk(int sysPk){
-				this.sysPk.set(sysPk);
+		public void setSysPk(int sysPK){
+				this.sysPK.set(sysPK);
 		}
 
-		public int getSysPk(){
-				return this.sysPk.get();
+		public int getSysPK(){
+				return this.sysPK.get();
 		}
 
-		public IntegerProperty sysPkProperty(){
-				return this.sysPk;
+		public IntegerProperty sysPKProperty(){
+				return this.sysPK;
 		}
 
 	//Metodos get y set FECHA
@@ -117,16 +117,16 @@ public class BitacoraChecks {
 		}
 
 	//Metodos get y set EMPLEADO
-		public void setEmpleado(int empleado){
-			this.empleado.set(empleado);
+		public void setUsuario(int usuario){
+			this.usuario.set(usuario);
 		}
 
-		public int getEmpleado(){
-			return this.empleado.get();
+		public int getUsuario(){
+			return this.usuario.get();
 		}
 
-		public IntegerProperty empleadoProperty(){
-			return this.empleado;
+		public IntegerProperty usuarioProperty(){
+			return this.usuario;
 		}
 
 
