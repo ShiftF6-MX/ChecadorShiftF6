@@ -20,9 +20,9 @@ public class UsuariosDAO {
 	//METODO PARA HACER CREATE EN LA TABLA USUARIOS
 	public static boolean createUsuarios(Connection connection, Usuarios usuarios) {
 		String query = "INSERT INTO usuarios (Codigo, Usuario, Contrasena, CorreoElectronico, FechaRegistro, Status, AreaFK, HorarioFK, GrupoUsuarioFK) "
-				+ "VALUES (?, ?, AES_ENCRYPT(?,'Shit_F6'), ?, CURDATE(), ?, ?, ?, ?)";
+				+ "VALUES (?, ?, AES_ENCRYPT(?,'Shift_F6'), ?, CURDATE(), ?, ?, ?, ?)";
 		try {
-			PreparedStatement sentenciaPreparada = (PreparedStatement) connection.prepareStatement(query);
+			PreparedStatement sentenciaPreparada =  connection.prepareStatement(query);
 			sentenciaPreparada.setString(1, usuarios.getCodigo());
 			sentenciaPreparada.setString(2, usuarios.getUsuario());
 			sentenciaPreparada.setString(3, usuarios.getContrasena());
@@ -164,10 +164,10 @@ public class UsuariosDAO {
 	public static boolean updateUsuarios(Connection connection, Usuarios usuarios) {
 		String query = " ";
 		if(usuarios.getStatus().equals(Usuarios.BAJA)) {
-			query = "UPDATE usuarios SET Codigo = ?, Usuario = ?, Contrasena = AES_ENCRYPT(?, 'ShiftF_6'), CorreoElectronico = ?, FechaBloqueo = CURDATE(), Status = ?, AreaFK = ?, HorarioFK = ?, GrupoUsuarioFK = ? "
+			query = "UPDATE usuarios SET Codigo = ?, Usuario = ?, Contrasena = AES_ENCRYPT(?, 'Shift_F6'), CorreoElectronico = ?, FechaBloqueo = CURDATE(), Status = ?, AreaFK = ?, HorarioFK = ?, GrupoUsuarioFK = ? "
 					+ "WHERE Sys_PK = ?";
 		}else {
-			query = "UPDATE usuarios SET Codigo = ?, Usuario = ?, Contrasena = AES_ENCRYPT(?, 'ShiftF_6'), CorreoElectronico = ?, FechaBloqueo = NULL, Status = ?, AreaFK = ?, HorarioFK = ?, GrupoUsuarioFK = ? "
+			query = "UPDATE usuarios SET Codigo = ?, Usuario = ?, Contrasena = AES_ENCRYPT(?, 'Shift_F6'), CorreoElectronico = ?, FechaBloqueo = NULL, Status = ?, AreaFK = ?, HorarioFK = ?, GrupoUsuarioFK = ? "
 					+ "WHERE Sys_PK = ?";
 		}//FIN IF
 		

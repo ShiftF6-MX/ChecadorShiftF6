@@ -7,6 +7,7 @@ import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
+import mx.shf6.checksystem.model.dao.GrupoDAO;
 
 public class Usuarios {
 	
@@ -218,7 +219,7 @@ public class Usuarios {
 		return this.grupoUsuarioFK;
 	}
 	public Grupo getGrupoUsuario(Connection connection){
-		return connection;
+		return GrupoDAO.readGrupo(connection, this.getGrupoUsuarioFK());
 	}//FIN METODO
 	//FIN METODOS
 	
